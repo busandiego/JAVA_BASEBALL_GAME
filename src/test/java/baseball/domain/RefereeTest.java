@@ -19,6 +19,7 @@ class RefereeTest {
     }
 
     // JUNIT 5 test refactoring
+    // junit 5 추가 필요
    /* @ParameterizedTest
     @CsvSource({"1,2,3,0 볼 3 스트라이크", "7,8,9,아웃", "2,3,1,3 볼 0 스트라이크","1,3,2,2 볼 1 스트라이크"})
     public void compare(int number1, int number2, int number3, String expected) {
