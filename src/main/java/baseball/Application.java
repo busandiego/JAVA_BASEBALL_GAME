@@ -35,5 +35,7 @@ public class Application {
         String result = referee.compare(Arrays.asList(3, 1, 2), Arrays.asList(1, 2, 3));
         System.out.println(result); // 3 스트라이크
 
+        String result2 = referee.compare(Arrays.asList(9, 8, 7), Arrays.asList(1, 2, 3));
+        System.out.println(result2);
     }
 }

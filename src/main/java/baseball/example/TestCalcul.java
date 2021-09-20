@@ -33,7 +33,7 @@ public class TestCalcul {
         testResult.setStrikeCount(strikeCount);
         testResult.setBallCount(ballCount);
         if(nothing){
-            testResult.setNothing("낫싱");
+            testResult.setNothing("아웃");
         } else {
             testResult.setNothing(" ");
         }

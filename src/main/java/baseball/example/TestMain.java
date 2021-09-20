@@ -49,7 +49,7 @@ public class TestMain {
                 System.out.println("시도: " + tryNum +
                         "\n스트라이크: " + testResult.getStrikeCount() +
                         "\n볼: " + testResult.getBallCount() +
-                        "\n낫싱: " + testResult.getNothing()
+                        "\n아웃: " + testResult.getNothing()
                 );
 
                 if (testResult.getStrikeCount() == 3) {
