@@ -7,6 +7,7 @@ import baseball.domain.Referee;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 /*
   1. 기능을 가지고 있는 클래스를 인스턴스화(=객체)한다.
@@ -16,26 +17,30 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) {
-        NumberGenerator numberGenerator = new NumberGenerator();
-        List<Integer> numbers = numberGenerator.createRandomNumbers();
-        System.out.println(numbers);
+      NumberGenerator generator = new NumberGenerator();
+      List<Integer> computer = generator.createRandomNumbers();
 
-        Judgement judgement = new Judgement();
-        int count = judgement.correctCount(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 1));
-        System.out.println(count); // 1
+      Referee referee = new Referee();
+      String result = "";
+      // length로 바꿔서하는게 더 확실함
+      while(!result.equals("0 볼 3 스트라이크")){
 
+          result = referee.compare(computer, askNumber());
+          System.out.println(result);
+      }
+        System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+    }
 
-        boolean place = judgement.hasPlace(Arrays.asList(7, 8, 9), 0, 7);
-        System.out.println(place);
+    public static List<Integer> askNumber() {
+        System.out.println("숫자를 입력해 주세요 : ");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
 
-        boolean place2 = judgement.hasPlace(Arrays.asList(7, 8, 9), 1, 7);
-        System.out.println(place2);
+        List<Integer> numbers = new ArrayList<>();
+        for (String number : input.split("")) {
+            numbers.add(Integer.valueOf(number));
+        }
 
-        Referee referee = new Referee();
-        String result = referee.compare(Arrays.asList(3, 1, 2), Arrays.asList(1, 2, 3));
-        System.out.println(result); // 3 스트라이크
-
-        String result2 = referee.compare(Arrays.asList(9, 8, 7), Arrays.asList(1, 2, 3));
-        System.out.println(result2);
+        return numbers;
     }
 }
