@@ -16,7 +16,6 @@ public class TestCalcul {
 
             if (inputNumbers.get(i).intValue() == comNumbers.get(i).intValue()) {
                 strikeCount++;
-                break;
             } else {
                 for (int j = 0; j < comNumbers.size(); j++) {
                     if (inputNumbers.get(i).intValue() == comNumbers.get(j).intValue()) {
@@ -24,16 +23,21 @@ public class TestCalcul {
                     }
                 }
             }
+        }
 
-            if (strikeCount == 0 && ballCount == 0) {
-                nothing = true;
-            }
+        if (strikeCount == 0 && ballCount == 0) {
+            nothing = true;
         }
 
         TestResult testResult = new TestResult();
         testResult.setStrikeCount(strikeCount);
         testResult.setBallCount(ballCount);
-        testResult.setNothing(nothing);
+        if(nothing){
+            testResult.setNothing("낫싱");
+        } else {
+            testResult.setNothing(" ");
+        }
+
 
         return testResult;
     }

@@ -4,7 +4,9 @@ public class TestResult {
 
     private int strikeCount = 0;
     private int ballCount = 0;
-    private boolean nothing = false;
+    private String nothing;
+
+    private String ERROR;
 
     public int getStrikeCount() {
         return strikeCount;
@@ -22,11 +24,19 @@ public class TestResult {
         this.ballCount = ballCount;
     }
 
-    public boolean isNothing() {
+    public String getNothing() {
         return nothing;
     }
 
-    public void setNothing(boolean nothing) {
+    public void setNothing(String nothing) {
         this.nothing = nothing;
+    }
+
+    public String getERROR() {
+        return ERROR;
+    }
+
+    public void setERROR(String ERROR) {
+        this.ERROR = ERROR;
     }
 }
