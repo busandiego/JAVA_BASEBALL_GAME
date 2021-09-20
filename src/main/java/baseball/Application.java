@@ -24,5 +24,10 @@ public class Application {
         System.out.println(count); // 1
 
 
+        boolean place = judgement.hasPlace(Arrays.asList(7, 8, 9), 0, 7);
+        System.out.println(place);
+
+        boolean place2 = judgement.hasPlace(Arrays.asList(7, 8, 9), 1, 7);
+        System.out.println(place2);
     }
 }

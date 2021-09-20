@@ -17,7 +17,16 @@ public class Judgement {
         return result;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeNumber, int number) {
-        return false;
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number) {
+
+        // 줄여서 쓰기 가능
+        return computer.get(placeIndex) == number;
+
+        /*if (computer.get(placeIndex) == number) {
+            return true;
+        } else {
+            return false;
+        }*/
+
     }
 }
