@@ -1,5 +1,9 @@
 package baseball;
 
+import baseball.domain.NumberGenerator;
+
+import java.util.List;
+
 /*
   1. 기능을 가지고 있는 클래스를 인스턴스화(=객체)한다.
   2. 필요한 기능을 각 인스턴스가 수행하게 한다. (의인화)
@@ -8,6 +12,8 @@ package baseball;
 public class Application {
 
     public static void main(String[] args) {
-
+        NumberGenerator numberGenerator = new NumberGenerator();
+        List<Integer> numbers = numberGenerator.createRandomNumbers();
+        System.out.println(numbers);
     }
 }
