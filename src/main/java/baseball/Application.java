@@ -2,6 +2,7 @@ package baseball;
 
 import baseball.domain.Judgement;
 import baseball.domain.NumberGenerator;
+import baseball.domain.Referee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,5 +30,10 @@ public class Application {
 
         boolean place2 = judgement.hasPlace(Arrays.asList(7, 8, 9), 1, 7);
         System.out.println(place2);
+
+        Referee referee = new Referee();
+        String result = referee.compare(Arrays.asList(3, 1, 2), Arrays.asList(1, 2, 3));
+        System.out.println(result); // 3 스트라이크
+
     }
 }
